@@ -1,0 +1,6 @@
+spring-boot:build-image
+
+docker build -t springexample .
+
+docker ps
+docker stop "id"
