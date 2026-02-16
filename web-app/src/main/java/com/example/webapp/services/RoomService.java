@@ -31,11 +31,11 @@ public class RoomService {
         return getRoomFromEntity(roomEntity);
     }
 
-    public void deleteRoom(Room room) {
-        roomRepository.deleteById(room.getId());
+    public void deleteRoom(UUID id) {
+        roomRepository.deleteById(id);
     }
 
-    private Room updateRoom(Room room) {
+    public Room updateRoom(Room room) {
         RoomEntity roomEntity = getRoomEntityFromRoom(room);
         roomEntity = roomRepository.save(roomEntity);
         return getRoomFromEntity(roomEntity);
