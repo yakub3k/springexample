@@ -1,13 +1,17 @@
 package com.example.webapp.data.entiry;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
 @Entity
 @Data
 @Table(name = "EMPLOYEES")
+@AllArgsConstructor
+@NoArgsConstructor
 public class StaffMember {
 
     @Id

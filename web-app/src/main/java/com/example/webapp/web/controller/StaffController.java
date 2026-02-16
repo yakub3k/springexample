@@ -26,7 +26,7 @@ public class StaffController {
                 .map(s ->
                         new Staff(s.getEmployeeId(), s.getFirstName(), s.getLastName(), s.getPosition().toString()))
                 .toList();
-        model.addAttribute("staff", staffs);
+        model.addAttribute("staffs", staffs);
         return "staff";
     }
 }
