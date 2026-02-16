@@ -1,6 +1,7 @@
 package com.example.webapp;
 
 import com.example.webapp.data.repository.RoomRepository;
+import com.example.webapp.data.repository.StaffRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +15,10 @@ public class WebAppApplication {
     }
 
     @Bean
-    public CommandLineRunner run(RoomRepository roomRepository) {
+    public CommandLineRunner run(RoomRepository roomRepository, StaffRepository staffRepository) {
         return args -> {
             roomRepository.findAll().forEach(System.out::println);
+            staffRepository.findAll().forEach(System.out::println);
         };
     }
 }

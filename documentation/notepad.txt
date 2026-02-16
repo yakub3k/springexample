@@ -4,3 +4,10 @@ docker build -t springexample .
 
 docker ps
 docker stop "id"
+
+# Open shell in postgres docker instance
+docker exec -it pg-docker /bin/bash
+
+psql -U postgres -d local
+
+http://localhost:8080/h2-console
