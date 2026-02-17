@@ -5,18 +5,24 @@
     <title>Hotel | Rooms</title>
 </head>
 <body>
-<table>
-    <tr>
-        <th>Number</th>
-        <th>Name</th>
-        <th>Info</th>
-    </tr>
-    <tr th:each="room:${rooms}">
-        <td th:text="${room.number}">Number</td>
-        <td th:text="${room.name}">Name</td>
-        <td th:text="${room.info}">Info</td>
-    </tr>
-</table>
+    <header>
+        <a th:href="@{/}" href="#">Home</a>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out">
+        </form>
+    </header>
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>Info</th>
+        </tr>
+        <tr th:each="room:${rooms}">
+            <td th:text="${room.number}">Number</td>
+            <td th:text="${room.name}">Name</td>
+            <td th:text="${room.info}">Info</td>
+        </tr>
+    </table>
 
 </body>
 </html>
