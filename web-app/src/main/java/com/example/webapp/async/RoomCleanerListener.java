@@ -24,7 +24,7 @@ public class RoomCleanerListener {
         try {
             AsyncPayload asyncPayload = objectMapper.readValue(message, AsyncPayload.class);
 
-            switch (asyncPayload.getModel()) {
+            switch (asyncPayload.getModel().toLowerCase()) {
                 case "room":
                     Room roomById = roomService.getRoomById(asyncPayload.getId());
                     log.info("Room cleaned: {}", roomById);
